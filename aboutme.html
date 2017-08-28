@@ -6,66 +6,89 @@
 <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
 <title>About us|Yuking Mizuking Official Website</title>
 <meta name="Description" content="hi,evaryone.We are Yuking and Mizuking.Let us introduce ourselves.We wanna be youtuber.If you like us,Please cheer up and resigter our channel.">
-<meta name="Keywords" content="youtuber,youtube,yukingmizuking,ユーチューバー,ユーチューブ">
+<meta name="Keywords" content="youtuber,youtube,yukingmizuking,ユーチューバーになりたい,ユーチューブ">
 <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 <link rel="stylesheet" type="text/css" href="style.css" media="all" />
 <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"/>
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
-<link rel="stylesheet" type="text/css" href="css/drawer.min.css" media="all" />
-<script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-<script src="JS/iscroll.js"></script>
-<script src="JS/drawer.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
 <script>
-	$(function(){
-		$('.drawer').drawer();
-	});
-</script>
-
-
+	jQuery(document).ready(function(){
+   $('a').mousemove(function(e){
+     var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+     var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+     $('a').css('text-shadow', +rYP/10+'px '+rXP/80+'px rgba(227,6,19,.8), '+rYP/8+'px '+rXP/60+'px rgba(255,237,0,1), '+rXP/70+'px '+rYP/12+'px rgba(0,159,227,.7)');
+   });
+});
+	</script>
 </head>
 
-<body class="drawer drawer--right">
+<body class="aboutus">
 <header>
-  <h1><img src="img/img_logo.png" width="1280" height="800" alt="we are YUKING MIZUKING from Japan" /></h1>
-	<nav>
-		<ul>
-			<li><a href="#">About Us</a></li>
-			<li><a href="#">Youtube</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Follow Us</a></li>
-		</ul>
+  <h1><a href="#"><img src="img/img_logo.png" alt="yukingmizuking official website" width="1280" height="800" border="0" /></a></h1>
+	<nav class="menu clearfix">
+			<p><a href="#">About Us</a></p>
+			<p><a href="#">Youtube</a></p>
+			<p><a href="#">Blog</a></p>
+			<p><a href="#">Follow Us</a></p>
 	</nav>
-	<section>
-		<h2>Yuking</h2>
-        <div class="birth">
-          <p>Birth of day</p>
-          <p>11.10.2009</p>
+	<section class="contents">
+		<h2 class="area">Yuking</h2>
+        <div class="detail">
+          <div class="birth">
+            <p class="jiterry">The day of coming to Earth　　　　11.10.2009</p>
+            </div>
+          <div class="like">
+            <p class="jiterry">Like<br>
+            Youtube, Lego, Pokemon, Mom, Dad, Mizuking, Yokai-Watch, BaybladeBurst</p>
+            </div>
+          <div class="wannabe">
+            <p class="jiterry">Wanna be<br>
+            Daddy,spider-man</p>
+            </div>
         </div>
-        <div class="like">
-          <p>like</p>
-          <p>Youtube, Lego, Pokemon, Mom, Dad, Mizuking, Yokai-Watch, BaybladeBurst</p>
-        </div>
-        <div class="wannabe">
-          <p>Wanna be</p>
-          <p>Daddy,spider-man</p>
-        </div>
-		<h2>Mizuking</h2>
-        <div class="birth">
-          <p>Birth of day</p>
-          <p>6.3.2012</p>
-        </div>
-        <div class="like">
-          <p>like</p>
-          <p>Youtube, Tomica, Pokemon, Mom, Dad, Yuking, Yokai-Watch, BaybladeBurst</p>
-        </div>
-        <div class="wannabe">
-          <p>Wanna be</p>
-          <p>Astronaut</p>
+		<h2 class="area">Mizuking</h2>
+        <div class="detail">
+          <div class="birth clearfix">
+            <p class="jiterry">The day of coming to Earth　　　　6.3.2012</p>
+            </div>
+          <div class="like">
+            <p class="jiterry">Like<br>
+            Youtube, Tomica, Pokemon, Mom, Dad, Yuking, Yokai-Watch, BaybladeBurst</p>
+            </div>
+          <div class="wannabe">
+            <p class="jiterry">Wanna be<br>
+            Astronaut</p>
+            </div>
         </div>
 	</section>	
 </header>
+<script>
+	jQuery(document).ready(function(){
+   $('a').hover(function(e){
+     var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+     var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+     $('a').css('text-shadow', +rYP/10+'px '+rXP/80+'px rgba(227,6,19,.8), '+rYP/8+'px '+rXP/60+'px rgba(255,237,0,1), '+rXP/70+'px '+rYP/12+'px rgba(0,159,227,.7)');
+   });
+});
+	</script>
+	<script>
+		$(function(){
+  var $jittery = $('.jiterry'),
+      aText    = $jittery.text().split(''),
+      letters = '';
+  
+  for(var i = 0; i < aText.length; i++){
+    letters += '<span>'+aText[i]+'</span>';
+  }
+  
+  $jittery.empty().append(letters);
+  
+  $.each($('p', $jittery), function(i){
+    $(this).css('animation-delay', '-'+i+'70ms');
+  });
+});
+	</script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

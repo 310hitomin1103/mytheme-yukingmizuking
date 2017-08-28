@@ -147,3 +147,62 @@ header .imglogotop img:hover{
 	right: 0;
 }
 }
+/*共通*/
+.contents{
+	padding: 5% 10%;
+}
+/*aboutus*/
+.aboutus header h1 img{
+	width: 20%;
+	height: auto;
+	float: left;
+}
+.aboutus header .menu p a{
+  font-size:20px;
+  padding:30px;
+  color: #fff;
+  float: left;
+}
+.aboutus h2{
+	font-size: 32px;
+}
+.aboutus .contents .area{
+  text-align: center;
+  font-size: 3.5em;
+  color: #fff;
+  letter-spacing: 7px;
+  font-weight: 500;
+  text-transform: uppercase;
+  animation: blur 1.2s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+.detail{
+	letter-spacing: 5px;
+}
+.aboutus .contents .detail .jiterry{
+	animation:jitter 200ms linear infinite;
+}
+@keyframes jitter{ 50%{transform:skewY(0.7deg) skewX(-0.7deg) scale(1.006);} }
